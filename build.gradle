@@ -1,0 +1,37 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    is_minifyEnabled = true
+    targetSdkVersion = 25
+    minSdkVersion = 19
+    compileSdkVersion = 25
+    buildToolsVersion = "25.0.2"
+    supportVersion = "25.2.0"
+    version_sdk = '2.2.2'
+    DB_NAME ="abcpen"
+    version_code = 30
+    version_name = "1.2.2"
+}
